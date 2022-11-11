@@ -15,6 +15,11 @@ body {
   flex-wrap: wrap;
 }
 
+.productsContainer a {
+  color: black;
+  text-decoration: none;
+}
+
 .singleProduct {
   flex: 1 0 21%;
   margin: 5px;
@@ -38,4 +43,8 @@ body {
 
 .productDetails .price .value {
   font-weight: bold;
+}
+
+.singleImageContainer {
+  max-width: 400px;
 }

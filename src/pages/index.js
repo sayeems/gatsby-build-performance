@@ -16,18 +16,22 @@ const Index = (props) => {
       <div className="productsContainer">
         {products.map((product) => (
           <div className="singleProduct" key={product.slug}>
-            <div className="imageContainer">
-              <GatsbyImage
-                image={product.image.localFile.childImageSharp.gatsbyImageData}
-                alt={product.name}
-              />
-            </div>
-            <div className="productDetails">
-              <h4 className="title">{product.name}</h4>
-              <p className="price">
-                Price: <span className="value">$12</span>
-              </p>
-            </div>
+            <Link to={product.slug}>
+              <div className="imageContainer">
+                <GatsbyImage
+                  image={
+                    product.image.localFile.childImageSharp.gatsbyImageData
+                  }
+                  alt={product.name}
+                />
+              </div>
+              <div className="productDetails">
+                <h4 className="title">{product.name}</h4>
+                <p className="price">
+                  Price: <span className="value">$12</span>
+                </p>
+              </div>
+            </Link>
           </div>
         ))}
       </div>
